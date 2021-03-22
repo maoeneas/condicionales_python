@@ -68,7 +68,7 @@ def numbers():
                                                        numero_2,
                                                        producto))
 
-    # Calcular la suma de dos números si almenos uno de ellos
+    # Calcular la suma de dos números si al menos uno de ellos
     # es mayor o igual a cero
     numero_3 = -20
 
@@ -111,3 +111,4 @@ if __name__ == '__main__':
     print('Bienvenidos a otra clase de Inove con Python')
     numbers()
     strings()
+

@@ -28,16 +28,41 @@ def ej1():
 
     # Compare cual de los dos números es mayor
     # Imprima en pantalla según corresponda
-
+    if numero_1 > numero_2:
+        print("el munero", numero_1 ,"es mayor que el ", numero_2)
+    else:
+        print("el munero", numero_2, "es mayor que el ", numero_1)
     # Verifique si el numero_1 positivo, negativo o cero
     # Imprima el resultado en cada caso
+    numero_1 = int(input('Ingrese el primer número:\n'))
 
-    # Verifique si el numero_1 es mayor a 0 y menor a 100
-    # Imprima en pantalla si se cumple o no la condición
+    if numero_1 > 0:
+        print(numero_1, "es positivo")
+    elif numero_1 < 0:
+        print(numero_1, 'es negativo')
+    else:
+        print(numero_1, 'y es 0')
+
+    #Verifique si el numero_1 es mayor a 0 y menor a 100
+    #Imprima en pantalla si se cumple o no la condición
+    numero_1 = int(input('Ingrese un número:\n'))
+
+    if numero_1 > 0 and numero_1 < 100:
+        print("el numero que ingreso si cumple la condicion mayor a cero y menor que 100")
+    else:
+        print("no se cumple la condicion mayor a cero y menor que 100")
 
     # Verifique si el numero_1 es menor a 10 o el numero_2
     # es mayor a -2
     # Imprima en pantalla si se cumple o no la condición
+
+    numero_1 = int(input('Ingrese un número:\n'))
+    numero_2 = int(input('Ingrese un número:\n'))
+    if numero_1 < 10 or numero_2 > -2:
+        print('ASI ES!!! SE CUMPLE')
+    else:
+        print('NO NO.... NO SE CUMPLE LA CONDICION')
+
 
 
 def ej2():
@@ -52,23 +77,52 @@ def ej2():
 
     # Compare cual de las dos palabras es mayor (alfabéticamente)
     # Imprima en pantalla según corresponda
-
+    
+    if texto_1 > texto_2:
+        print('{} esta despues alfabeticamente que {}'.format(texto_1, texto_2))
+    else:
+        print('{} esta antes alfabeticamente que {}'.format(texto_1, texto_2))
+    
+       
     # Compare cual de las dos palabras tiene mayor
     # cantidad de letras
     # Imprima en pantalla según corresponda
-
     # Verifique si la primera letra de la primera palabra
     # es mayor a la primera letra de la segunda palabra
     # Imprima en pantalla según corresponda
+    texto_1 = str(input('Ingrese la primera palabra:\n'))
+    texto_2 = str(input('Ingrese la segunda palabra:\n'))
+
+    pasa_len = len(texto_1)
+    pasa_len2 = len(texto_2)
+
+    if texto_1 > texto_2:
+    print(texto_1,"tiene mayor cantidad de letras que",texto_2)
+    print("porque tiene:",pasa_len,"caracteres")
+    else:
+    print(texto_2,"tiene mayor cantidad de letras que",texto_1)
+    print("porque tiene:",pasa_len2,"caracteres")
+    
+    if texto_1[0] > texto_2[0]:
+        print('primer letra de texto 1',texto_1,'es mayor a primer letra de', texto_2)
+    else:
+        print('primer letra de texto2',texto_2, 'es mayor a primer letra de', texto_1)
 
     copia_texto_1 = texto_1  # Copia de la variable texto_1
 
     # Verifique que copia_texto_1 es igual a texto_1
+    if copia_texto_1 == texto_1:
+        print("son iguales las dos variables")        
+    
     # Imprima en pantalla según corresponda
+    print(copia_texto_1,texto_1)
 
     # Verifique que copia_texto_1 es distinta a texto_2
     # Imprima en pantalla según corresponda
-
+    if copia_texto_1 == texto_1:
+        print("son iguales las dos variables")        
+    if copia_texto_1 != texto_2:
+    print("nada que ver!!")    
 
 def ej3():
     # Ejercicios de práctica numérica
@@ -82,10 +136,18 @@ def ej3():
     #       es positivo
     #       --> En caso afirmativo imprima en pantalla "Resp=1"
     #       --> En caso negativo imprima en pantalla   "Resp=2"
-    #  --> En caso negativo (numero_1 no es mayor a 5)
-    #      verifique si el numero_2 es mayor a 5
-    #       --> En caso afirmativo imprima en pantalla "Resp=3"
-    #       --> En caso negativo imprima en pantalla "Resp=4"
+    numero_1 = 7
+    numero_2 = -2
+
+    if numero_1 > 5 and numero_2 > 0:
+        print ('resp=1')
+    else:
+        print('resp2')
+
+    if not numero_1 > 5 and numero_2 > 5:
+    print('resp 3')
+    else:
+        print('resp 4')
 
     # Verifique la calificación de un estudiante según su
     # puntaje en un examen
@@ -96,10 +158,24 @@ def ej3():
     # Si el puntaje es mayor igual a 70 --> imprimir C
     # Si el puntaje es mayor igual a 60 --> imprimir D
     # Si el puntaje es manor a  60      --> imprimir F
-
     # Debe imprimir en pantalla la calificacion
     # Utilizar "if" anidados
 
+    # no me esta funcionando pero tampoco me da error!!!! me anote para charlarlo ...
+    puntaje = 70
+
+    if puntaje >= 90:
+        print("A")
+        if puntaje >= 80:
+            print("B")
+            if puntaje >= 70:
+                print("C")
+                if puntaje >= 60 and puntaje < 69:
+                    print("D")
+                    if puntaje < 60:
+                        print("F")
+
+    
 
 def ej4():
     # Ejemplos variables de texto
@@ -109,11 +185,21 @@ def ej4():
 
     # Verifique cual cual de los dos textos es mayor alfabéticamente
     # Imprima en pantalla según corresponda
-
+    if texto_1 > texto_2:
+        print( texto_1,"es mayor alfabeticamente hablando")
+    else:
+        print( texto_2,"es mayor alfabeticamente hablando")
     # Transforma esas variables tipo texto y almacénalas
+    texto_1= int(texto_1)
+    texto_2= int(texto_2)
+
     # en nuevas variables númericas (int)
     # Repita el proceso, ¿Cuál de las nuevas variables es mayor?
     # Imprima en pantalla según corresponda
+    if texto_1 > texto_2:
+        print( texto_1,"es mayor alfabeticamente hablando")
+    else:
+        print( texto_2,"es mayor alfabeticamente hablando")
 
     # Para pensar!
     # ¿Por qué cree que texto_2 es mayor a texto_1?
