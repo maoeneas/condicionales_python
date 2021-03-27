@@ -1,20 +1,11 @@
-texto_1 = '5'
-texto_2 = '7'
-
-    # Verifique cual cual de los dos textos es mayor alfabéticamente
-    # Imprima en pantalla según corresponda
-if texto_1 > texto_2:
-    print( texto_1,"es mayor alfabeticamente hablando")
-else:
-    print( texto_2,"es mayor alfabeticamente hablando")
-    # Transforma esas variables tipo texto y almacénalas
-texto_1= int(texto_1)
-texto_2= int(texto_2)
-
-    # en nuevas variables númericas (int)
-    # Repita el proceso, ¿Cuál de las nuevas variables es mayor?
-    # Imprima en pantalla según corresponda
-if texto_1 > texto_2:
-    print( texto_1,"es mayor alfabeticamente hablando")
-else:
-    print( texto_2,"es mayor alfabeticamente hablando")
+print("ingrese valor de temperatura 1")
+valor_1= float(input())
+print("ingrese valor de temperatura 2")
+valor_2= float(input())
+print("ingrese valor de temperatura 3")
+valor_3= float(input())
+total= valor_1,valor_2,valor_3 
+print("el maximo es:", max(total))
+print("el minimo es:", min(total))
+promedio= (valor_1+valor_2+valor_3)/3
+print("el promedio es:", promedio)
