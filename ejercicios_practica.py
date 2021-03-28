@@ -97,6 +97,8 @@ def ej2():
     pasa_len2 = len(texto_2)
 
     if texto_1 > texto_2:
+        # Este condicional tiene que ser entre pasa_len y pasa_len2, porque nos interesa encuestar la cantidad de letras, no el orden alfabetico.
+        # Además tenes el indentado corrido XD
     print(texto_1,"tiene mayor cantidad de letras que",texto_2)
     print("porque tiene:",pasa_len,"caracteres")
     else:
@@ -121,7 +123,8 @@ def ej2():
     # Imprima en pantalla según corresponda
     if copia_texto_1 == texto_1:
         print("son iguales las dos variables")        
-    if copia_texto_1 != texto_2:
+    if copia_texto_1 != texto_2: 
+        # Acá tenes de nuevo el tema del indentado, recorda siempre que luego de un " : " tenes que agregar 4 espacios debajo antes de escribir ;D 
     print("nada que ver!!")    
 
 def ej3():
@@ -145,6 +148,7 @@ def ej3():
         print('resp2')
 
     if not numero_1 > 5 and numero_2 > 5:
+        # Indentado :D
     print('resp 3')
     else:
         print('resp 4')
@@ -174,6 +178,23 @@ def ej3():
                     print("D")
                     if puntaje < 60:
                         print("F")
+    # Que pasaría si el puntaje del alumno es 69?
+    # Y si fuera 91? no imprimiría 'A', 'B' y 'C'? porque 91 es mayor a 90, a 80 y a 70... entonces? como hacemo XD?
+    # para eso tenemos que usar 'elif' que descarta el resto una vez que entra a una condición, así:
+
+    # puntaje = 91
+
+    # if puntaje >= 90:
+    #     print('A')
+    # elif puntaje >= 80:
+    #     print('B')
+    # elif puntaje >= 70:
+    #     print('C')
+    # elif puntaje >= 60 and puntaje <= 69:
+    #     print ('D')
+    # elif puntaje < 60:
+    #     print('F')
+    
 
     
 
